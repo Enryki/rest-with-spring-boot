@@ -43,7 +43,7 @@ jobs:
       working-directory: ./
       run: docker compose build
 
-    - name: Tag and Push Docker Image to Amazon Container Registry - ECR
+    - name: Tag and Push Docker Image to Amazon Container Registry - ECR ##New Repo URL
       run: |
         docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio:latest ${{ secrets.IMAGE_REPO_URL }}:latest
         docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio:latest ${{ secrets.IMAGE_REPO_URL }}:${{ github.run_id }}
