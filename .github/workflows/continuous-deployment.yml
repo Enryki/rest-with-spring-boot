@@ -48,7 +48,7 @@ jobs:
         docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio:latest ${{ secrets.IMAGE_REPO_URL }}:latest
         docker tag ${{ secrets.DOCKER_USERNAME }}/rest-with-spring-boot-erudio:latest ${{ secrets.IMAGE_REPO_URL }}:${{ github.run_id }}
         docker push ${{ secrets.IMAGE_REPO_URL }}:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}:${{ github.run_id }}
+        docker push ${{ secrets.IMAGE_REPO_URL }}:${{ github.run_id }}
 
     - name: Push to Docker Hub Container Registry
       run: |
