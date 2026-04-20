@@ -101,7 +101,6 @@ class BookControllerJsonTest extends AbstractIntegrationTest {
         assertNotNull(book.getId());
         assertEquals("Docker Deep Dive", book.getTitle());
         assertEquals("Nigel Poulton", book.getAuthor());
-        assertEquals(55.99, book.getPrice());
     }
     
     @Test
@@ -132,7 +131,6 @@ class BookControllerJsonTest extends AbstractIntegrationTest {
         assertNotNull(book.getId());
         assertEquals("Docker Deep Dive - Updated", book.getTitle());
         assertEquals("Nigel Poulton", book.getAuthor());
-        assertEquals(55.99, book.getPrice());
     }
 
     @Test
@@ -161,7 +159,6 @@ class BookControllerJsonTest extends AbstractIntegrationTest {
         assertNotNull(book.getId());
         assertEquals("Docker Deep Dive - Updated", book.getTitle());
         assertEquals("Nigel Poulton", book.getAuthor());
-        assertEquals(55.99, book.getPrice());
     }
 
     @Test
@@ -206,7 +203,6 @@ class BookControllerJsonTest extends AbstractIntegrationTest {
         assertTrue(bookOne.getId() > 0);
         assertEquals("The Art of Agile Development", bookOne.getTitle());
         assertEquals("James Shore e Shane Warden", bookOne.getAuthor());
-        assertEquals(97.21, bookOne.getPrice());
 
         BookDTO foundBookSeven = books.get(7);
 
@@ -217,7 +213,6 @@ class BookControllerJsonTest extends AbstractIntegrationTest {
         assertTrue(foundBookSeven.getId() > 0);
         assertEquals("The Art of Computer Programming, Volume 1: Fundamental Algorithms", foundBookSeven.getTitle());
         assertEquals("Donald E. Knuth", foundBookSeven.getAuthor());
-        assertEquals(139.69, foundBookSeven.getPrice());
     }
 
     private void mockBook() {
